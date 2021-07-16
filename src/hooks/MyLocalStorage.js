@@ -2,6 +2,17 @@ import { useEffect, useState } from 'react'
 
 const PREFIX = 'dytefrontend'
 
+function fun(){
+  fetch("https://pastebin.com/api/api_post.php", {
+  mode: 'no-cors',
+  body: "api_dev_key=YOUR API DEVELOPER KEY&api_paste_code=test&api_option=paste",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  method: "POST"
+}).then(data => {console.log(data)})
+}
+
 function MyLocalStorage(key, initialValue) {
     const prefixedKey = PREFIX + key
 
